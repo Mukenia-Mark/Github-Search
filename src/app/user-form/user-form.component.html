@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <h2 class="text-center">Search for a Github User</h2>
+  <p>Use this page to search for a github user.</p>
+  <hr />
+  <form (ngSubmit)="(newUser)" #usernameForm="ngForm">
+    <label for="name">Github Username</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      [(ngModel)]="newUser"
+      name="name"
+      #name="ngModel"
+      required
+    />
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      <p>Username is required</p>
+    </div>
+    <button type="submit" class="btn btn-success">Search for User</button>
+  </form>
+</div>
