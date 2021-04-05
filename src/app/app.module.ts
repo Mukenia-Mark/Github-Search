@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { RepositoryComponent } from './repository/repository.component';
+import { RepositoryFormComponent } from './repository-form/repository-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { UserFormComponent } from './user-form/user-form.component';
     NavbarComponent,
     AboutComponent,
     UserComponent,
-    UserFormComponent
+    UserFormComponent,
+    RepositoryComponent,
+    RepositoryFormComponent
   ],
   imports: [
     BrowserModule,

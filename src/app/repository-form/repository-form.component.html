@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <h2 class="text-center">Search for a Github Repository</h2>
+  <p>Use this page to search for a github repository.</p>
+  <hr />
+  <form (ngSubmit)="(newRepository)" #repositoryForm="ngForm">
+    <label for="name">Github Repository</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      [(ngModel)]="newRepository"
+      name="name"
+      #name="ngModel"
+      required
+    />
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      <p>Repository name is required</p>
+    </div>
+    <button type="submit" class="btn btn-success">Search for Repository</button>
+  </form>
+</div>
