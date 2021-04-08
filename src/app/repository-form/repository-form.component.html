@@ -16,6 +16,12 @@
     <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
       <p>Repository name is required</p>
     </div>
-    <button type="submit" class="btn btn-success">Search for Repository</button>
+    <button
+      type="submit"
+      class="btn btn-success"
+      (click)="repositoryForm.reset()"
+    >
+      Search for Repository
+    </button>
   </form>
 </div>

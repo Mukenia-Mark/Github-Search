@@ -8,7 +8,9 @@ import {User}from '../user';
 })
 export class UserComponent implements OnInit {
 
-  users!: User[]
+  users: User[]=[
+    new User (""),
+  ]
 
   addNewUser(user:any){
     this.users.push(user)
