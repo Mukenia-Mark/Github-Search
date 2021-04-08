@@ -14,6 +14,10 @@ export class UserFormComponent implements OnInit {
   submitUser(){
     this.addUser.emit(this.newUser);
   }
+
+
+
+
   
   constructor() { }
 
