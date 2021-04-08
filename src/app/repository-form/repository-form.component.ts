@@ -8,7 +8,7 @@ import { Repository } from '../repository';
 })
 export class RepositoryFormComponent implements OnInit {
 
-  newRepository= new Repository()
+  newRepository= new Repository("","")
   @Output() addRepository=new EventEmitter<Repository>()
 
   submitRepository(){
@@ -18,7 +18,7 @@ this.addRepository.emit(this.newRepository)
   
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

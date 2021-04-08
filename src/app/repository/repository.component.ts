@@ -8,7 +8,9 @@ import {Repository} from '../repository';
 })
 export class RepositoryComponent implements OnInit {
 
-  repositories!: Repository[]
+  repositories: Repository[]=[
+    new Repository ("",""),
+  ]
 
   addNewRepository(repository:any){
     this.repositories.push(repository)

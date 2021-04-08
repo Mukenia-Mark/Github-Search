@@ -1,3 +1,6 @@
 export class Repository {
-  name!:string;
+  constructor(
+    public repository:string,
+  public profile:string,
+  ){}
 }

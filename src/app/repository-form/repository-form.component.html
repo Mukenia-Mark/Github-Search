@@ -1,27 +1,45 @@
 <div class="container-fluid">
-  <h2 class="text-center">Search for a Github Repository</h2>
-  <p>Use this page to search for a github repository.</p>
+  <h2 class="text-center">Search for a Github repository</h2>
+  <p>Use this page to search for a Github repository.</p>
   <hr />
-  <form (ngSubmit)="(newRepository)" #repositoryForm="ngForm">
-    <label for="name">Github Repository</label>
-    <input
-      type="text"
-      class="form-control"
-      id="name"
-      [(ngModel)]="newRepository"
-      name="name"
-      #name="ngModel"
-      required
-    />
-    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-      <p>Repository name is required</p>
+  <form (ngSubmit)="(submitRepository)" #repositoryForm="ngForm">
+    <div class="form-group">
+      <label for="repository">Repository</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="newRepository.repository"
+        name="name"
+        #name="ngModel"
+        required
+      />
+      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        <p>Repository name is required !!</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="profile">User</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="newRepository.profile"
+        name="name"
+        #name="ngModel"
+        required
+      />
+      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        <p>Username is required !!</p>
+      </div>
     </div>
     <button
       type="submit"
       class="btn btn-success"
       (click)="repositoryForm.reset()"
     >
-      Search for Repository
+      Search
     </button>
   </form>
 </div>
